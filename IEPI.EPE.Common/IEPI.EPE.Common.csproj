@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{860E27EC-E0F0-498A-9FF5-C0EB9DB8E8C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IEPI.EPE</RootNamespace>
+    <AssemblyName>IEPI.EPE.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\release\IEPI.EPE.Common.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Heroius.Extension, Version=1.0.14.0, Culture=neutral, PublicKeyToken=3c246bd6a563727a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Heroius.Extension.1.0.14\lib\portable-net40+sl5+wp8+win8\Heroius.Extension.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.5.1, Culture=neutral, PublicKeyToken=a0535750202e8456, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph_HM.1.0.3\lib\net40\ZedGraph.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Vent\EffectVol\CommonContainer.cs" />
+    <Compile Include="Vent\EffectVol\HopperContainer.cs" />
+    <Compile Include="Vent\EffectVol\HorizontalBagFilter.cs" />
+    <Compile Include="Vent\EffectVol\IContainer.cs" />
+    <Compile Include="Vent\EffectVol\IBagFilter.cs" />
+    <Compile Include="Vent\EffectVol\IWithHopper.cs" />
+    <Compile Include="Vent\EffectVol\Section.cs" />
+    <Compile Include="Vent\EffectVol\VerticalBagFilter.cs" />
+    <Compile Include="Vent\Old\AsisClass.cs" />
+    <Compile Include="Vent\Common.cs" />
+    <Compile Include="Vent\GB\Utility.cs" />
+    <Compile Include="Vent\GB\GB15605_2008.cs" />
+    <Compile Include="Vent\Old\Container\Cylindrical.cs" />
+    <Compile Include="Vent\Old\Container\CylindricHopper.cs" />
+    <Compile Include="Vent\Old\HDR.cs" />
+    <Compile Include="Vent\Old\Container\RecHopper.cs" />
+    <Compile Include="Vent\Old\Container\RecHopperClosed.cs" />
+    <Compile Include="Vent\Old\Enums.cs" />
+    <Compile Include="Vent\Old\Inheritable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vent\Old\EN\No14491_2006.cs" />
+    <Compile Include="Vent\Old\GB\No15605_2008.cs" />
+    <Compile Include="Vent\Old\NFPA\No68_2007.cs" />
+    <Compile Include="Vent\Old\VDI\No3673_2002.cs" />
+    <Compile Include="Vent\Old\StdStrs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
